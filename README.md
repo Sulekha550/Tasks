@@ -1,95 +1,114 @@
-# Dexter — Full Stack Task Management Assessment
+Full Stack Developer – Technical Assessment
 
-A Figma-focused task management application built with Next.js App Router, Tailwind CSS, NestJS, TypeScript and SQLite.
+A full-stack Task Management System developed as part of the Full Stack Developer Technical Assessment.
 
-## Included flows
+Part 1 – Task Management System
+Live Demo
 
-- Guest Login with a NestJS `/auth/guest` endpoint and local session persistence.
-- Tasks: Board and List views.
-- Fields menu with selectable columns.
-- Nested task filters for Status, Priority, Members, Due Date, Teams, Labels and Reporter.
-- Task detail panel with editable title/description, status, priority, dates, labels, subtasks, comments and updates.
-- Projects page with search, fields, filters, add/edit/delete and responsive table layout.
-- Profile page matching the supplied Figma flow.
-- Sidebar theme and color controls.
-- Light/Dark theme and accent color persist across refreshes.
-- Responsive desktop, tablet and mobile layouts.
-- NestJS validation using class-validator and clean REST endpoints.
+https://sulekha-psi.vercel.app/
 
-## Run
+Overview
 
-### Backend
+Dexter is a Figma-focused task management application built with Next.js App Router, Tailwind CSS, NestJS, TypeScript and SQLite.
 
-```bash
-cd backend
+Features
+Guest Login
+Task Board and List views
+Create, edit and delete tasks
+Task detail panel
+Status and priority management
+Due dates, labels, members, teams and reporters
+Nested task filters
+Fields/columns selection
+Subtasks and comments
+Projects search, add, edit and delete
+Profile page
+Light/Dark theme
+Accent color customization
+Theme persistence across refreshes
+Responsive desktop, tablet and mobile layouts
+Reusable components
+NestJS REST APIs
+Request validation using class-validator
+Tech Stack
+Frontend: Next.js, React, TypeScript, Tailwind CSS
+Backend: NestJS, TypeScript
+Database: SQLite
+Local Setup
+
+Backend
+
+cd task-management-system/backend
 npm install
 npm run start:dev
-```
 
-Backend runs on `http://localhost:4000`.
+Runs on http://localhost:4000
 
-### Frontend
+Frontend
 
-```bash
-cd frontend
+cd task-management-system/frontend
 npm install
 npm run dev
-```
 
-Frontend runs on `http://localhost:3000`.
+Runs on http://localhost:3000
 
-Optional frontend API URL:
-
-```env
+Environment Variable
 NEXT_PUBLIC_API_URL=http://localhost:4000
-```
-
-## API
-
-- `POST /auth/guest`
-- `GET /tasks`
-- `POST /tasks`
-- `PATCH /tasks/:id`
-- `DELETE /tasks/:id`
-- `POST /tasks/:id/comments`
-- `POST /tasks/:id/subtasks`
-- `GET /projects`
-- `POST /projects`
-- `PATCH /projects/:id`
-- `DELETE /projects/:id`
-
-## Design notes
-
-The implementation follows the supplied Figma references for the Login, Tasks Board, Tasks List, Fields/Filter menus, Task Detail, Projects, Theme/Color menus and Profile flows. Responsive behavior is adapted for smaller screens where the fixed Figma canvas cannot be reproduced literally; horizontal task tables/boards scroll rather than clipping content.
-
-No intentional product-level deviations were made beyond responsive adaptations and using CSS-generated placeholder avatars/branding because the Figma reference does not provide production asset files in this repository.
+API Endpoints
+POST   /auth/guest
 
 
-## Final QA
+GET    /tasks
+POST   /tasks
+PATCH  /tasks/:id
+DELETE /tasks/:id
 
-- Reviewed the requested Figma flows: Guest Login, Tasks Board/List, Fields and Filters, Projects, Sidebar menu, Task Detail, and Profile.
-- Removed an extra login-only logo element so the Guest Login composition stays aligned with the reference.
-- TypeScript/TSX parser validation completed for all frontend and backend source files with no syntax diagnostics.
-- No generated build artifacts or local SQLite database are included in the submission archive.
 
-## Running locally
+POST   /tasks/:id/comments
+POST   /tasks/:id/subtasks
 
-Start the NestJS API first:
 
-```bash
-cd backend
-npm install
-npm run start:dev
-```
+GET    /projects
+POST   /projects
+PATCH  /projects/:id
+DELETE /projects/:id
+Design Fidelity
 
-Then start Next.js in another terminal:
+The implementation follows the supplied Figma references for Guest Login, Tasks Board, Tasks List, Fields, Filters, Task Detail, Projects, Theme/Color menus and Profile.
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+Responsive adaptations were made for smaller screens where the fixed Figma canvas could not be reproduced literally. Horizontal task tables and boards scroll instead of clipping content.
 
-The frontend uses `http://localhost:4000` for the API by default. Set `NEXT_PUBLIC_API_URL` if the API runs elsewhere.
+QA & Testing
+Reviewed all requested Figma flows.
+TypeScript/TSX parser validation completed for frontend and backend source files.
+No generated build artifacts or local SQLite database are included.
 
-Project/task creation is also guarded against a temporarily unavailable API: the UI keeps the workspace usable with localStorage fallback and automatically uses the NestJS API whenever it is reachable.
+Part 2 – AbleSpace Product Understanding
+
+The Take Data workflow from the Caseload tab in AbleSpace has been explored and documented.
+
+The complete Part 2 submission, including screenshots, workflow explanation, product understanding and UX/UI or functionality improvement suggestions, is provided in a single PDF.
+
+Documentation
+
+View AbleSpace Walkthrough PDF
+
+Repository Structure
+full-stack-developer-assessment/
+│
+├── README.md
+│
+├── task-management-system/
+│   ├── frontend/
+│   ├── backend/
+│   └── README.md
+│
+└── part-2-abespace/
+    └── AbleSpace-Walkthrough.pdf
+Submission Links
+
+Live Application:
+https://sulekha-psi.vercel.app/
+
+GitHub Repository:
+[Add your public repository link here.](https://github.com/Sulekha550/Tasks)
